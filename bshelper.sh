@@ -87,8 +87,6 @@ function printSheet()
 	local sheetExists=$?
 
 	if [ $sheetExists -eq 1 ]; then
-		chmod -w $1
-
 		if [[ $EDITOR == "none" ]]; then
 			echo -e "----------==========[ ${BLUE}$1${NC} ]==========----------"
 			echo 
@@ -105,9 +103,6 @@ function printSheet()
 	else
 		echo -e "[${RED}Error${NC}] The $1 file does not exist or has been corrupted!"
 	fi
-
-	echo
-	echo
 }
 #========================================
 
@@ -212,8 +207,6 @@ function main_()
 				echo -e "[${RED}Error${NC}] Invalid option number" 
 				;;
 		esac
-	
-		echo
 		echo
 	done
 }

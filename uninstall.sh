@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 while [ true ]; do
-	echo -r "Are you sure you want to remove bshelper(y/n): "
-	read input_key
+	printf "Are you sure you want to remove bshelper(y/n): "
+	read -r input_key
 
 	if [ "$input_key" == "y" ] || [ "$input_key" == "Y" ]; then
 		echo "removing bshelper..."
@@ -15,6 +15,7 @@ while [ true ]; do
 		echo
 		echo "done."
 		echo
+		exit
 	elif [ "$input_key" == "n" ] || [ "$input_key" == "N" ]; then
 		echo "exiting script..."
 		exit
